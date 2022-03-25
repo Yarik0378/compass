@@ -1,0 +1,287 @@
+[
+  {
+    "@context": "https:\u002F\u002Fschema.org",
+    "@type": [
+      "SingleFamilyResidence",
+      "Product",
+      "RealEstateListing"
+    ],
+    "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+    "mpn": "1009355741177289113",
+    "brand": {
+      "@id": "https:\u002F\u002Fwww.compass.com"
+    },
+    "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+    "amenityFeature": [
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Air Conditioning"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Doorman"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Elevator"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Garage"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Parking Included"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#LocationFeatureSpecification",
+        "@type": "LocationFeatureSpecification",
+        "name": "Washer \u002F Dryer in Unit"
+      }
+    ],
+    "containedInPlace": {
+      "@type": "Place",
+      "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#place",
+      "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#place",
+      "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+      "address": {
+        "@type": "PostalAddress",
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#postalAddress",
+        "streetAddress": "300 Grand Street, Unit 331",
+        "addressLocality": "Southwest Hoboken",
+        "addressRegion": "NJ",
+        "postalCode": "07030",
+        "addressCountry": "US"
+      }
+    },
+    "description": "2nd Month Free on a 12 Month Lease. *Advertised rent is net effective based on current concession of 1 month free on a 12 month lease. Photos of a different unit with similar features. Live the life you have always wanted at The Grand Adams in Hoboken, New Jersey in this newly renovated two bed, 1.5 bath split-level loft just steps from the bustling nightlife, boutique shops and extensive dining options along famed Washington Street. Units feature Expansive Living Space, Gorgeous Views of Hoboken and Manhattan, Modern Finishes, Gourmet Kitchen, and Ample Closet Space. 2 shared outdoor courtyards provide a tranquil retreat. The Grand Adams offers you the very best in contemporary apartment living all just minutes away from Interstate 78, the Holland Tunnel and the New Jersey Turnpike. For those looking for an easy commute to New York City, the property is just a short walk to the Hoboken PATH Station, which provides a brief 8-minute subway ride to both Midtown and Lower Manhattan.",
+    "floorSize": [],
+    "image": [
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#image-0",
+        "@type": "ImageObject",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Fm\u002F82f8d498e53cc6309ddb4607908a74bbe9e26799_img_0_57e7b\u002Forigin.jpg"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#image-1",
+        "@type": "ImageObject",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Fm\u002F82f8d498e53cc6309ddb4607908a74bbe9e26799_img_1_fe46d\u002Forigin.jpg"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#image-2",
+        "@type": "ImageObject",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Fm\u002F82f8d498e53cc6309ddb4607908a74bbe9e26799_img_2_7eaf7\u002Forigin.jpg"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#image-3",
+        "@type": "ImageObject",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Fm\u002F82f8d498e53cc6309ddb4607908a74bbe9e26799_img_3_45bb7\u002Forigin.jpg"
+      },
+      {
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#image-4",
+        "@type": "ImageObject",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Fm\u002F82f8d498e53cc6309ddb4607908a74bbe9e26799_img_4_bf28c\u002Forigin.jpg"
+      }
+    ],
+    "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+    "numberOfRooms": "2",
+    "offers": {
+      "@type": "Offer",
+      "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#offer",
+      "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+      "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+      "price": 4400,
+      "priceCurrency": "USD",
+      "itemOffered": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+      "offeredBy": {
+        "url": "https:\u002F\u002Fwww.compass.com",
+        "telephone": "5519988485",
+        "@type": "RealEstateAgent",
+        "name": "Diana Sutherlin",
+        "image": "https:\u002F\u002Fwww.compass.com\u002Fm3\u002F9928f7ecca525aeabe43dc5078e959ddcf00882d.jpg",
+        "email": "diana.sutherlin@compass.com",
+        "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#PersonOrOrganization",
+        "potentialAction": {
+          "@type": "Action",
+          "agent": {
+            "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F"
+          },
+          "name": "CommunicateAction",
+          "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002Fdiana.sutherlin@compass.com",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#Action"
+        },
+        "priceRange": "$4,400",
+        "address": {
+          "@type": "PostalAddress",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#postalAddress",
+          "streetAddress": "300 Grand Street, Unit 331",
+          "addressLocality": "Southwest Hoboken",
+          "addressRegion": "NJ",
+          "postalCode": "07030",
+          "addressCountry": "US"
+        }
+      },
+      "seller": {
+        "@type": "Organization",
+        "url": "https:\u002F\u002Fwww.compass.com\u002F",
+        "name": "Compass",
+        "sameAs": [
+          "https:\u002F\u002Ftwitter.com\u002Fcompass",
+          "https:\u002F\u002Fwww.facebook.com\u002Fcompass",
+          "https:\u002F\u002Fwww.instagram.com\u002Fcompass\u002F"
+        ],
+        "description": "A revolutionizing real estate brokerage with unparalleled agents. ",
+        "logo": "https:\u002F\u002Fwww.compass.com\u002Fstatic\u002Fimg\u002Fcompass_logo_black.svg",
+        "telephone": "+1-212-913-9058",
+        "@id": "https:\u002F\u002Fwww.compass.com\u002F"
+      }
+    },
+    "potentialAction": {
+      "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#Action"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#postalAddress",
+      "streetAddress": "300 Grand Street, Unit 331",
+      "addressLocality": "Southwest Hoboken",
+      "addressRegion": "NJ",
+      "postalCode": "07030",
+      "addressCountry": "US"
+    },
+    "event": [
+      {
+        "@type": "Event",
+        "name": "Sunday, Mar 27th",
+        "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+        "eventStatus": "https:\u002F\u002Fschema.org\u002FEventScheduled",
+        "eventAttendanceMode": "https:\u002F\u002Fschema.org\u002FOfflineEventAttendanceMode",
+        "startDate": "2022-03-27T16:00:00.000Z",
+        "endDate": "2022-03-27T17:00:00.000Z",
+        "offers": {
+          "@type": "Offer",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#offer",
+          "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+          "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+          "price": 4400,
+          "priceCurrency": "USD",
+          "itemOffered": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F",
+          "offeredBy": {
+            "url": "https:\u002F\u002Fwww.compass.com",
+            "telephone": "5519988485",
+            "@type": "RealEstateAgent",
+            "name": "Diana Sutherlin",
+            "image": "https:\u002F\u002Fwww.compass.com\u002Fm3\u002F9928f7ecca525aeabe43dc5078e959ddcf00882d.jpg",
+            "email": "diana.sutherlin@compass.com",
+            "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#PersonOrOrganization",
+            "potentialAction": {
+              "@type": "Action",
+              "agent": {
+                "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F"
+              },
+              "name": "CommunicateAction",
+              "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002Fdiana.sutherlin@compass.com",
+              "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#Action"
+            },
+            "priceRange": "$4,400",
+            "address": {
+              "@type": "PostalAddress",
+              "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#postalAddress",
+              "streetAddress": "300 Grand Street, Unit 331",
+              "addressLocality": "Southwest Hoboken",
+              "addressRegion": "NJ",
+              "postalCode": "07030",
+              "addressCountry": "US"
+            }
+          },
+          "seller": {
+            "@type": "Organization",
+            "url": "https:\u002F\u002Fwww.compass.com\u002F",
+            "name": "Compass",
+            "sameAs": [
+              "https:\u002F\u002Ftwitter.com\u002Fcompass",
+              "https:\u002F\u002Fwww.facebook.com\u002Fcompass",
+              "https:\u002F\u002Fwww.instagram.com\u002Fcompass\u002F"
+            ],
+            "description": "A revolutionizing real estate brokerage with unparalleled agents. ",
+            "logo": "https:\u002F\u002Fwww.compass.com\u002Fstatic\u002Fimg\u002Fcompass_logo_black.svg",
+            "telephone": "+1-212-913-9058",
+            "@id": "https:\u002F\u002Fwww.compass.com\u002F"
+          }
+        },
+        "location": {
+          "@type": "Place",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#place",
+          "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#place",
+          "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+          "address": {
+            "@type": "PostalAddress",
+            "@id": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F#postalAddress",
+            "streetAddress": "300 Grand Street, Unit 331",
+            "addressLocality": "Southwest Hoboken",
+            "addressRegion": "NJ",
+            "postalCode": "07030",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Person",
+          "name": "DIANA SUTHERLIN",
+          "email": "diana@sutherlingroup.com"
+        },
+        "description": ""
+      }
+    ],
+    "accommodationFloorPlan": {
+      "@type": "FloorPlan",
+      "name": "300 Grand Street, Unit 331 Hoboken, NJ 07030",
+      "floorSize": [],
+      "description": "2nd Month Free on a 12 Month Lease. *Advertised rent is net effective based on current concession of 1 month free on a 12 month lease. Photos of a different unit with similar features. Live the life you have always wanted at The Grand Adams in Hoboken, New Jersey in this newly renovated two bed, 1.5 bath split-level loft just steps from the bustling nightlife, boutique shops and extensive dining options along famed Washington Street. Units feature Expansive Living Space, Gorgeous Views of Hoboken and Manhattan, Modern Finishes, Gourmet Kitchen, and Ample Closet Space. 2 shared outdoor courtyards provide a tranquil retreat. The Grand Adams offers you the very best in contemporary apartment living all just minutes away from Interstate 78, the Holland Tunnel and the New Jersey Turnpike. For those looking for an easy commute to New York City, the property is just a short walk to the Hoboken PATH Station, which provides a brief 8-minute subway ride to both Midtown and Lower Manhattan.",
+      "numberOfBathroomsTotal": 2,
+      "numberOfFullBathrooms": 1,
+      "numberOfPartialBathrooms": 1,
+      "numberOfBedrooms": 2,
+      "petsAllowed": true,
+      "url": "https:\u002F\u002Fwww.compass.com\u002Flisting\u002F300-grand-street-unit-331-hoboken-nj-07030\u002F1009355741177289113\u002F"
+    },
+    "speakable": "2nd Month Free on a 12 Month Lease. *Advertised rent is net effective based on current concession of 1 month free on a 12 month lease. Photos of a different unit with similar features. Live the life you have always wanted at The Grand Adams in Hoboken, New Jersey in this newly renovated two bed, 1.5 bath split-level loft just steps from the bustling nightlife, boutique shops and extensive dining options along famed Washington Street. Units feature Expansive Living Space, Gorgeous Views of Hoboken and Manhattan, Modern Finishes, Gourmet Kitchen, and Ample Closet Space. 2 shared outdoor courtyards provide a tranquil retreat. The Grand Adams offers you the very best in contemporary apartment living all just minutes away from Interstate 78, the Holland Tunnel and the New Jersey Turnpike. For those looking for an easy commute to New York City, the property is just a short walk to the Hoboken PATH Station, which provides a brief 8-minute subway ride to both Midtown and Lower Manhattan."
+  },
+  {
+    "@context": "https:\u002F\u002Fschema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Thing",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Ffor-rent\u002Fhoboken-nj\u002F",
+          "name": "Hoboken"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Thing",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Ffor-rent\u002Fhoboken-nj-07030\u002F",
+          "name": "07030"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Thing",
+          "@id": "https:\u002F\u002Fwww.compass.com\u002Ffor-rent\u002Fsouthwest-hoboken-hoboken-nj\u002F",
+          "name": "Southwest Hoboken"
+        }
+      }
+    ]
+  }
+]
+        
