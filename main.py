@@ -4,17 +4,22 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
-import codecs
+import threading
+from threading import Thread
 
-from lxml.html._diffcommand import description
-
+lock = threading.Lock()
+threads = []
+threads_number = 12
 
 class CompassScraper:
     df2 = pd.DataFrame()
+    result = []
+    all_result = []
 
-    def __init__(self):
-        self.result = []
-
+    def __init__(self, i=None, j=None):
+        self.count = 0
+        self.i = i
+        self.j = j
         self.headers = {
             'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0"
                           ".4758.82 Safari/537.36",
@@ -46,12 +51,6 @@ class CompassScraper:
                           "viewport": {"northeast": {"lat": 41.0097836, "lng": -73.0710237},
                                        "southwest": {"lat": 40.368345, "lng": -75.1144807}},
                           "purpose": "search"}
-        # self.json_data_2 = {"searchResultId": "d8e78b63-fecc-453b-9cc4-97a1bc36fc56",
-        #                     "rawLolSearchQuery": {"listingTypes": [0], "locationIds": [31167, 31282],
-        #                                           "rentalStatuses": [7, 5], "num": 41, "sortOrder": 115,
-        #                                           "facetFieldNames": ["contributingDatasetList", "compassListingTypes",
-        #                                                               "comingSoon"]}, "width": 591.6666259765625,
-        #                     "height": 963.6588134765625, "purpose": "search"}
 
     def save_data(self, result):
         df_dict = pd.DataFrame(result)
@@ -81,9 +80,13 @@ class CompassScraper:
     #     return json_data_two
 
     def scrape_link_home(self):
-        url = f"https://www.compass.com/for-rent/new-york-ny/"
         start = 0
+        original_url = 'https://www.compass.com/for-rent/jersey-city-nj/'
         while True:
+            if start == 0:
+                url = original_url
+            else:
+                url = f"{original_url}start={start}"
             r = requests.post(url, json=self.json_data, headers=self.headers).text
             json_all_list = json.loads(r)
             json_list_link = json.loads(r)['lolResults']['data']
@@ -95,13 +98,13 @@ class CompassScraper:
                 break
             print(url)
             start += 41
-            if start >= 41:
-                url = f"https://www.compass.com/for-rent/new-york-ny/start={start}"
+            # if start == 41:
+            #     url = f"https://www.compass.com/for-rent/jersey-city-nj/start={start}"
+
 
     def scrape_data_from_link(self):
-        result = []
-        count = 1
-        for json_data in self.result:
+
+        for json_data in CompassScraper.result[self.i:self.j]:
             link_for_requests = 'https://www.compass.com' + json_data['navigationPageLink']
             soup = self.send_requests(link_for_requests)
             # json_data_two = self.send_requests_two(json_data["listingIdSHA"])
@@ -140,7 +143,6 @@ class CompassScraper:
                 description = re.search('"description":"(.*?)",', str(soup)).group(1).replace(r'\u002F', '/')
             except:
                 description = 'ERROR'
-            print(description)
             try:
                 amenity = ''
                 amenity_ = json_data['detailedInfo']['amenities']
@@ -155,37 +157,62 @@ class CompassScraper:
                         image_sourse = json_data['media'][-1]['originalUrl']
             except:
                 image_sourse = 'ERROR'
+
             try:
                 street_number = json_data['location']['streetNumber']
+            except:
+                street_number = ' '
+            try:
                 street = json_data['location']['street']
+            except:
+                street = ' '
+            try:
                 street_type = json_data['location']['streetType']
+            except:
+                street_type = ' '
+            try:
                 borough = json_data['location']['city']
+            except:
+                borough = ' '
+            try:
                 state = json_data['location']['state']
+            except:
+                state = ' '
+            try:
                 zip_code = json_data['location']['zipCode']
+            except:
+                zip_code = ' '
+            try:
                 address = f"{street_number} {street} {street_type}, {borough}, {state} {zip_code}"
+            except:
+                address = ' '
+            try:
                 building_name = f"{street_number} {street} {street_type}"
+            except:
+                building_name = ' '
+            try:
                 floor_plan = building_name + '_' + unit
             except:
-                street_number = "ERROR"
-                street = 'ERROR'
-                street_type = 'ERROR'
-                borough = 'ERROR'
-                state = 'ERROR'
-                zip_code = 'ERROR'
-                building_name = 'ERROR'
-                floor_plan = 'ERROR'
-                address = 'ERROR'
+                floor_plan = ' '
+
             try:
                 city = json_data['name']
             except:
-                city = ''
+                city = ' '
             try:
                 neighborhood = json_data['location']['neighborhood']
             except:
-                neighborhood = 'ERROR'
+                neighborhood = ''
+                try:
+                    neighborhood_ = soup.select('li')
+                    for n_ in neighborhood_:
+                        if 'Section' in n_.text:
+                            neighborhood = n_.select_one('span').text
+                except:
+                    neighborhood = ''
             try:
-                available = ''
-                status = ''
+                available = ' '
+                status = ' '
                 available_ = soup.select('.data-table__TableStyled-ibnf7p-0 tr ')
                 for x in available_:
                     if 'Available Date' in x.text:
@@ -202,8 +229,8 @@ class CompassScraper:
                 data_present = 0
             else:
                 data_present = 1
-
-            result.append({
+            lock.acquire()
+            CompassScraper.all_result.append({
                 "Source": link_for_requests,
                 "Unit": unit,
                 "Bedroom": bedroom,
@@ -230,14 +257,41 @@ class CompassScraper:
                 "Closing Date": ''
 
             })
-            print('==============================')
-            print(f"{count} / {len(self.result)}")
-            print('LINK: ', link_for_requests)
-            count += 1
-        self.save_data(result)
+            # print('==============================')
+            # print(f"{count + self.i} / {self.j}")
+            # print('LINK: ', link_for_requests)
+
+            self.count += 1
+            var = ''
+            for y in range(0, threads_number):
+                var += ' -> THREAD ' + str(y) + ' count = ' + str(threads[y].cs.count) + ' all = ' + str(threads[y].j -
+                                                                                                         threads[y].i)
+            print(var)
+
+            lock.release()
+
+
+class Thread(threading.Thread):
+    def __init__(self, i, j):
+        threading.Thread.__init__(self)
+        self.i = i
+        self.j = j
+        self.cs = CompassScraper(self.i, self.j)
+    def run(self):
+        self.cs.scrape_data_from_link()
 
 
 cs = CompassScraper()
 cs.scrape_link_home()
-cs.scrape_data_from_link()
+len_a = len(cs.result)
+
+
+for x in range(0, threads_number):
+    t = Thread(int(len_a/threads_number * x), int(len_a/threads_number * x + len_a / threads_number))
+    print(int(len_a / threads_number * x), int(len_a / threads_number * x + len_a / threads_number))
+    threads.append(t)
+    t.start()
+for t in threads:
+    t.join()
+cs.save_data(CompassScraper.all_result)
 cs.save_csv()
